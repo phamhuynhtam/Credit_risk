@@ -1,0 +1,12 @@
+# Cấu hình Streamlit cho ứng dụng PD logistic.
+# maxUploadSize (MB) phải khớp với MAX_UPLOAD_MB trong app/config.py để thông
+# báo giới hạn trên giao diện đúng với giới hạn máy chủ thực thi.
+[server]
+maxUploadSize = 200
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
