@@ -851,16 +851,23 @@ elif TRANG == "Hướng dẫn & triển khai":
         "4. Vào **Kết quả & báo cáo**: xem chỉ số, biểu đồ, phần đã/chưa kiểm định; tải báo cáo và artifact.\n"
         "5. Bấm **Xóa dữ liệu phiên** khi xong để gỡ dữ liệu khỏi máy chủ."
     )
-    st.subheader("Triển khai demo bằng điện thoại (tóm tắt)")
+    st.subheader("Triển khai demo bằng điện thoại qua GitHub (tóm tắt)")
     st.markdown(
-        "Ứng dụng là một app **Streamlit** (`streamlit_app.py`). Cách không cần máy tính để demo:\n\n"
-        "1. Trên điện thoại, mở trình duyệt tới **github.com**, kiểm tra repo này ở nhánh triển khai "
-        "có đủ `streamlit_app.py`, `requirements.txt`, `app/`, `pipeline/`.\n"
-        "2. Mở **share.streamlit.io** (Streamlit Community Cloud), đăng nhập bằng tài khoản GitHub của "
-        "chính chủ sản phẩm, chọn *New app*, trỏ tới repo/nhánh và tệp `streamlit_app.py`, bấm Deploy.\n"
-        "3. Đợi ứng dụng cài thư viện theo `requirements.txt`; mở liên kết `*.streamlit.app` được cấp để kiểm tra.\n"
-        "4. Chỉ dùng nút **Dữ liệu giả lập minh họa** khi demo công khai.\n\n"
-        "Tài liệu đầy đủ (gồm giới hạn tài nguyên gói miễn phí, cách chạy tại máy cá nhân/máy chủ nội bộ) "
+        "Ứng dụng là một app **Streamlit** (`streamlit_app.py`). Cách deploy demo không cần máy tính:\n\n"
+        "1. (Khuyến nghị) Trên **github.com** bằng điện thoại, merge Pull Request của nhánh "
+        "`arena/eac91acf-credit-risk` vào `main` (**Merge pull request → Confirm merge**) để deploy từ "
+        "nhánh chính; hoặc bỏ qua và deploy thẳng từ nhánh phụ.\n"
+        "2. Mở **share.streamlit.io/deploy**, đăng nhập GitHub của chính chủ sản phẩm, chọn "
+        "**Create app → Yup, I have an app**, điền: Repository `phamhuynhtam/Credit_risk`; Branch "
+        "`main` (hoặc `arena/eac91acf-credit-risk`, gõ tay nếu không thấy trong gợi ý); "
+        "Main file path `streamlit_app.py`.\n"
+        "3. Mở **Advanced settings → Python version: chọn 3.11** (đúng môi trường đã kiểm thử; "
+        "không đổi được sau khi deploy trừ phi xóa app tạo lại), để trống ô Secrets, rồi bấm **Deploy**.\n"
+        "4. Đợi vài phút cài `requirements.txt`; mở liên kết `*.streamlit.app` được cấp, chỉ kiểm thử "
+        "bằng **Dữ liệu giả lập minh họa**. App ngủ sau 12 giờ không truy cập — bấm "
+        "*Yes, get this app back up!* để đánh thức.\n\n"
+        "Bản chi tiết từng thao tác (cấp quyền GitHub, chọn subdomain, giới hạn gói miễn phí "
+        "2.7 GB RAM/50 GB đĩa, bảng xử lý lỗi build, Codespaces, chạy nội bộ cho dữ liệu thật) "
         "nằm ở `docs/HUONG_DAN_TRIEN_KHAI_DIEN_THOAI.md` trong repo. Repo này **chưa được triển khai** ở "
         "đâu; không có liên kết website nào đang hoạt động được xác minh."
     )

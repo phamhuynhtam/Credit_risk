@@ -37,6 +37,27 @@ Kiểm thử tự động (21 kiểm thử, dùng dữ liệu giả lập; kết
 .venv/bin/python -m pytest tests/ -v
 ```
 
+## Triển khai demo qua GitHub bằng điện thoại
+
+[![Mở trang triển khai Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy)
+
+Nút trên mở thẳng biểu mẫu triển khai của Streamlit Community Cloud. Repo này
+**chưa được triển khai**; chủ sản phẩm tự thực hiện bằng tài khoản GitHub của
+mình, điền đúng 3 trường sau rồi vào **Advanced settings** chọn **Python 3.11**
+trước khi bấm **Deploy**:
+
+| Trường | Giá trị |
+|---|---|
+| Repository | `phamhuynhtam/Credit_risk` |
+| Branch | `main` (sau khi merge Pull Request của nhánh `arena/eac91acf-credit-risk`) hoặc chính nhánh `arena/eac91acf-credit-risk` |
+| Main file path | `streamlit_app.py` |
+
+Hướng dẫn từng thao tác trên điện thoại (merge PR, cấp quyền GitHub, chọn
+subdomain, giới hạn gói miễn phí, app ngủ sau 12 giờ, xử lý lỗi build,
+Codespaces, chạy nội bộ cho dữ liệu thật):
+[`docs/HUONG_DAN_TRIEN_KHAI_DIEN_THOAI.md`](docs/HUONG_DAN_TRIEN_KHAI_DIEN_THOAI.md).
+Demo công khai **chỉ dùng dữ liệu giả lập**.
+
 ## Cấu trúc
 
 | Đường dẫn | Nội dung |
