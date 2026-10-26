@@ -1,0 +1,3 @@
+# Chỉ dùng cho kiểm thử tự động (tests/). Không cần cho chạy ứng dụng.
+-r requirements.txt
+pytest==8.3.4
